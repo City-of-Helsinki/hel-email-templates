@@ -158,10 +158,10 @@ table, tr, td {
 @media only screen {
   html {
     min-height: 100%;
-    background: #c2a251; } }
+    background: #9fc9eb; } }
 
 table.body {
-  background: #c2a251;
+  background: #9fc9eb;
   height: 100%;
   width: 100%; }
 
@@ -454,7 +454,7 @@ span.preheader {
   visibility: hidden;
   mso-hide: all !important;
   font-size: 1px;
-  color: #c2a251;
+  color: #9fc9eb;
   line-height: 1px;
   max-height: 0px;
   max-width: 0px;
@@ -542,20 +542,20 @@ table.button:active table a {
   border: 0 solid #005593; }
 
 table.button.secondary table td {
-  background: #c2a251;
+  background: #0072c6;
   color: #fefefe;
-  border: 0px solid #c2a251; }
+  border: 0px solid #0072c6; }
 
 table.button.secondary table a {
   color: #fefefe;
-  border: 0 solid #c2a251; }
+  border: 0 solid #0072c6; }
 
 table.button.secondary:hover table td {
-  background: #cfb677;
+  background: #008ff9;
   color: #fefefe; }
 
 table.button.secondary:hover table a {
-  border: 0 solid #cfb677; }
+  border: 0 solid #008ff9; }
 
 table.button.secondary:hover table td a {
   color: #fefefe; }
@@ -619,7 +619,7 @@ th.callout-inner {
     border: 0;
     color: #0a0a0a; }
   th.callout-inner.secondary {
-    background: #e7dab9;
+    background: #82caff;
     border: 0;
     color: #0a0a0a; }
   th.callout-inner.success {
@@ -723,10 +723,10 @@ table.menu.vertical th.menu-item {
 body,
 html,
 .body {
-  background: #c2a251 !important; }
+  background: #9fc9eb !important; }
 
 .wrapper.header {
-  background: #c2a251; }
+  background: #9fc9eb; }
 
 .header .container {
   background: transparent; }
@@ -738,7 +738,7 @@ html,
   background-color: #0072c6; }
 
 .bg-secondary {
-  background-color: #c2a251; }
+  background-color: #0072c6; }
 
 .bg-success {
   background-color: #3cd55f; }
@@ -760,3 +760,6 @@ html,
 
 .hel-logo {
   max-width: 100px; }
+
+.no-hyphens {
+  hyphens: none; }

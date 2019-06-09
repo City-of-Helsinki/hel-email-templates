@@ -1,0 +1,141 @@
+---
+layout: berth-reservation
+subject: Talvisäilytyspaikan hakemuksen vahvistus
+created_at: 12.5.2019 15.15
+lang: fi
+
+---
+{{!-- raw --}}
+
+<wrapper class="header">
+  <container>
+    <spacer size="48"></spacer>
+    <row class="collapse">
+      <columns small="4">
+        <img src="https://makasiini.hel.ninja/helsinki-logos/helsinki-logo-white.png" width="100" class="hel-logo">
+      </columns>
+      <columns small="7">
+        <h5 class="text-right text-white">Venepaikat</h5>
+      </columns>
+    </row>
+  </container>
+  <spacer size="12"></spacer>
+</wrapper>
+
+<container>
+
+  <spacer size="24"></spacer>
+
+  <row>
+    <columns small="12">
+
+      <h4>Hei {{ reservation.first_name }}!</h4>
+
+      <p>Kiitos, hakemuksesi on vastaanotettu.</p>
+
+      <p>Sinuun otetaan yhteyttä tekstiviestillä kun sopiva talvisäilytyspaikka vapautuu.</p>
+
+      <p>Jos haluat muuttaa tai perua hakemuksesi tai tiedustella muuta hakemukseesi liittyvää asiaa, lähetä sähköpostia osoitteeseen <span class="no-hyphens">venepaikkavaraukset@hel.fi</span>.</p>
+
+      <callout>
+        <spacer size="12"></spacer>
+          <b>Aika</b>
+          {{ created_at }}<br/>
+          <b>Hakija</b>
+          {{ reservation.first_name }} {{ reservation.last_name }}<br/>
+          {{!--{% if reservation.company_name %}--}}
+          <b>Yritys</b>
+          {{ reservation.company_name }} ({{ reservation.business_id }})<br/>
+          {{!--{% endif %}--}}
+        <spacer size="24"></spacer>
+        <table class="hr"><tbody><th></th></tbody></table>
+        <spacer size="12"></spacer>
+        <h5>Valitut säilytysalueet</h5>
+        <table>
+          <tbody>
+            {{!--{% for choice in area_choices %}--}}
+              <tr>
+              <td width="32px"><b>{{ choice.priority }}</b></td>
+              <td>{{ choice.winter_storage_area.name }}</td>
+              </tr>
+            {{!--{% endfor %}--}}
+          </tbody>
+        </table>
+        {{!--{% if reservation.application_code %}--}}
+          <p><b>Hakukoodi:</b> {{reservation.application_code}}</p>
+        {{!--{% endif %}--}}
+        <spacer size="24"></spacer>
+        <table class="hr"><tbody><th></th></tbody></table>
+        <spacer size="12"></spacer>
+        <h5>Veneen tiedot</h5>
+            {{!--{% if reservation.boat_registration_number %}--}}
+            <row class="collapse">
+              <columns large="4"><b>Rekisterinumero</b></columns>
+              <columns large="8">{{ reservation.boat_registration_number }}</columns>
+            </row>
+            {{!--{% endif %}--}}
+            {{!--{% if reservation.boat_name %}--}}
+            <row class="collapse">
+              <columns large="2"><b>Nimi</b></columns>
+              <columns large="4">{{ reservation.boat_name }}</columns>
+              <columns large="2"><b>Malli</b></columns>
+              <columns large="4">{{ reservation.boat_model }}</columns>
+            </row>
+            {{!--{% endif %}--}}
+            <row class="collapse">
+              <columns large="2" small="6"><b>Pituus</b></columns>
+              <columns large="4" small="6">{{ reservation.boat_length }} m</columns>
+              <columns large="2" small="6"><b>Leveys</b></columns>
+              <columns large="4" small="6">{{ reservation.boat_width }} m</columns>
+            </row>
+            <spacer size="24"></spacer>
+            <table class="hr"><tbody><th></th></tbody></table>
+            <spacer size="12"></spacer>
+            <h5>Säilytys</h5>
+            {{ reservation.storage_method }}
+            {{!--{% if reservation.trailer_registration_number %}--}}
+            <row class="collapse">
+              <columns large="4"><b>Trailerin rekisterinumero</b></columns>
+              <columns large="8">{{ reservation.trailer_registration_number }}</columns>
+            </row>
+            {{!--{% endif %}--}}
+      </callout>
+      <p>Terveisin,<br/>
+        Helsingin kaupungin venepaikkavaraukset</p>
+    </columns>
+  </row>
+
+</container>
+
+<spacer size="24"></spacer>
+
+<container>
+  <wrapper class="text-hel-copper">
+    <spacer size="24"></spacer>
+    <row>
+      <columns>
+        <p><strong>Venepaikkahaku</strong><br>
+        <a href="https://venepaikat.hel.fi">venepaikat.hel.fi</a></p>
+        <p>Puhelinneuvonta ma&#8211;pe klo 9&#8211;14 numerossa 09 310 87900.<br/>
+        Palveluaika arkisin klo 9&#8211;16 Töölön Kisahallissa osoitteessa Paavo Nurmen kuja 1 E.</p>
+      </columns>
+    </row>
+  </wrapper>
+</container>
+<container>
+  <wrapper class="secondary">
+
+    <spacer size="24"></spacer>
+
+    <row>
+      <columns>
+        <p><strong>Helsingin kaupunki</strong><br>
+        Kulttuuri ja vapaa-aika</p>
+        <a class="text-hel-coat" href="https://hel.fi">hel.fi</a> | <a class="text-hel-coat" href="https://www.hel.fi/helsinki/fi/kulttuuri-ja-vapaa-aika/ulkoilu/veneily/">Veneily</a>
+      </columns>
+    </row>
+  </wrapper>
+</container>
+
+<spacer size="120"></spacer>
+{{!-- /raw --}}
