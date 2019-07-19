@@ -53,8 +53,9 @@ lang: fi
           <spacer size="12"></spacer>
           <h5>Vaihtohakemus: Nykyinen satama</h5>
               <b>Satama:</b> {{ reservation.berth_switch.harbor.name }}<br>
-              <b>Laiturin tunnus:</b> {{!--{{ reservation.berth_switch.berth_number or "-" }}--}}<br>
+              <b>Laiturin tunnus:</b> {{!--{{ reservation.berth_switch.pier or "-" }}--}}<br>
               <b>Paikan numero:</b> {{ reservation.berth_switch.berth_number }}<br>
+              <b>Erityistoive:</b> {{ reservation.berth_switch.reason.title }}<br>
           {{!--{% endif %}--}}
         <spacer size="24"></spacer>
         <table class="hr"><tbody><th></th></tbody></table>
@@ -71,6 +72,7 @@ lang: fi
           </tbody>
         </table>
         {{!--{% if reservation.application_code %}--}}
+          <br>
           <p><b>Hakukoodi:</b> {{reservation.application_code}}</p>
         {{!--{% endif %}--}}
         {{!--{% if reservation.accessibility_required %}--}}

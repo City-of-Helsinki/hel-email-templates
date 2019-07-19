@@ -53,8 +53,9 @@ lang: sv
           <spacer size="12"></spacer>
           <h5>Ansökan om byte: Nuvarande platsen</h5>
               <b>Nuvarande hamn:</b> {{ reservation.berth_switch.harbor.name }}<br>
-              <b>Kajkod:</b> {{!--{{ reservation.berth_switch.berth_number or "-" }}--}}<br>
+              <b>Kajkod:</b> {{!--{{ reservation.berth_switch.pier or "-" }}--}}<br>
               <b>Nummer:</b> {{ reservation.berth_switch.berth_number }}<br>
+              <b>Särskilda önskemål:</b> {{ reservation.berth_switch.reason.title }}<br>
           {{!--{% endif %}--}}
         <spacer size="24"></spacer>
         <table class="hr"><tbody><th></th></tbody></table>
@@ -71,6 +72,7 @@ lang: sv
           </tbody>
         </table>
         {{!--{% if reservation.application_code %}--}}
+          <br>
           <p><b>Sökkod:</b> {{reservation.application_code}}</p>
         {{!--{% endif %}--}}
         {{!--{% if reservation.accessibility_required %}--}}
